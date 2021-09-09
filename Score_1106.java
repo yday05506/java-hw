@@ -1,51 +1,59 @@
+package Array;
 import java.util.Scanner;
 public class Score_1106 {
 	public static void main( String args[ ] ) {
 		Scanner scan = new Scanner(System.in);
 
+		int i=1;
 		int kor, eng, math, java;
 		int add; 
 		double avr;		
 		
-		System.out.print("ÇĞ¹ø : ");
+		System.out.print("í•™ë²ˆ : ");
 		String num = scan.next( );
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ì´ë¦„ : ");
 		String name = scan.next( );
 
-		System.out.print("±¹¾î : ");
+		System.out.print("êµ­ì–´ : ");
 		kor = scan.nextInt( );
-		System.out.print("¿µ¾î : ");
+		System.out.print("ì˜ì–´ : ");
 		eng = scan.nextInt( );
-		System.out.print("¼öÇĞ : ");
+		System.out.print("ìˆ˜í•™ : ");
 		math = scan.nextInt( );
-		System.out.print("ÀÚ¹Ù : ");
+		System.out.print("ìë°” : ");
 		java = scan.nextInt( );
 		
-		//ÃÑÁ¡
+		//ì´ì 
 		add = (kor + eng + math + java);
 		avr = (double)add / 4;
 		
 		System.out.println( );
-		System.out.println("ÃÑÁ¡ : " + add);
-		System.out.print("Æò±Õ : " + avr);
+		System.out.println("ì´ì  : " + add);
+		System.out.print("í‰ê·  : " + avr);
 		
-		System.out.print("ÆòÁ¡ : ");
-		switch((int)avr/10) {	// 0 ~ 100    99.999999
-			case 10 :
-			case 9 : System.out.println("A"); break;
-			case 8 : System.out.println("B"); break;
-			case 7 : System.out.println("C"); break;
-			case 6 : System.out.println("D"); break;
-			default : System.out.println("E");
+		System.out.print("ì ìˆ˜ : ");
+		
+		while(i <= java) {
+			if(avr <= 100 || avr >= 90) {
+				System.out.println("A");
+				break;
+			}
+			else if (avr >= 80) {
+					System.out.println("B");
+					break;
+			}
+			else if (avr >= 70) {
+				System.out.println("C");
+				break;
+			}
+			else if (avr >= 60) {
+				System.out.println("D");
+				break;
+			}
+			else {
+				System.out.println("E");
+				break;
+			}
 		}
-
-		//Æò±Õ A(90 ÀÌ»ó) B(80 ÀÌ»ó) C(70 ÀÌ»ó) D(60 ÀÌ»ó) E(³ª¸ÓÁö)
-		/* System.out.print("ÆòÁ¡ : ");
-		if (avr >= 90) System.out.println("A"); 
-		else 	if (avr >= 80) System.out.println("B");
-		else 	if(avr >= 70) System.out.println("C");
-		else 	if (avr >= 60) System.out.println("D");
-		else System.out.println("E");
-		*/
 	}
 }
