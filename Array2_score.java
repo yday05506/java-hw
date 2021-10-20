@@ -60,25 +60,9 @@ public class Array2_score {
 				}
 			}
 		}
-		
-		int x = 0, y = 0, z = 0;
-		while(true) {
-			if (add[x] < add[y]) {
-				ranking[z] = add[x];
-				x++;
-				z++;
-			}
-			else if (add[x] > add[y]) {
-				ranking[z] = add[y];
-				y++;
-				z++;
-			}
-		}
 	
-		System.out.println("===================================================");
-
 		//출력
-				
+		System.out.println("===================================================");
 		for(int i = 0; i < sub_title.length; i++) 
 				System.out.print("\t" + sub_title[i]);
 		System.out.print("\t합계");
@@ -91,7 +75,7 @@ public class Array2_score {
 				System.out.print(score[i][j] + "\t");
 			}
 			System.out.print(add[i] + "\t");
-			System.out.println(temp);
+			System.out.println(rank[i] +"\t");
 		}
 		System.out.println("===================================================");
 		System.out.print("최고팀 : " + win + "조");
