@@ -74,9 +74,11 @@ public class Array2_score {
 				z++;
 			}
 		}
-		
-		//출력
+	
 		System.out.println("===================================================");
+
+		//출력
+				
 		for(int i = 0; i < sub_title.length; i++) 
 				System.out.print("\t" + sub_title[i]);
 		System.out.print("\t합계");
